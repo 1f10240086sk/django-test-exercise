@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My ToDo App{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {# --- ここからヘッダー部分 --- #}
+    <header style="background-color: #333; color: white; padding: 10px 20px; text-align: center;">
+        <nav>
+            <a href="{% url 'todo_list' %}" style="color: white; text-decoration: none; margin: 0 15px;">ToDoリスト</a>
+            <a href="{% url 'todo_create' %}" style="color: white; text-decoration: none; margin: 0 15px;">ToDo作成</a>
+            {# 必要であれば他のリンクもここに追加 #}
+        </nav>
+        <h1>My ToDo Application</h1>
+    </header>
+    {# --- ヘッダー部分ここまで --- #}
+
+    <main style="padding: 20px;">
+        {% block content %}
+        {# 各ページの固有コンテンツがここに入る #}
+        {% endblock %}
+    </main>
+
+    <footer style="background-color: #f4f4f4; text-align: center; padding: 10px; border-top: 1px solid #eee;">
+        <p>&copy; 2024 My ToDo App</p>
+    </footer>
+</body>
+</html>
