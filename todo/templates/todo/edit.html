@@ -6,10 +6,24 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <link rel="stylesheet" type="text/css" href="../../../static/blog/css/edit.css">
+
   </head>
 
   <body>
-    <h1>Edit task</h1>
+    <header>
+      <nav class = "header-nav">
+        <ul>
+        <li><a href="index.html">Edit page</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="index.html" class="login-button">ホーム</a>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Edit task</h1>
+    </div>
     <p>You can edit tasks from the following form.</p>
     <form action="{% url 'update' task.id%}" method="post">
       {% csrf_token %}
