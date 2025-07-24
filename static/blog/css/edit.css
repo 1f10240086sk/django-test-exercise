@@ -1,0 +1,48 @@
+h1, p, div{
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* 適度な余白 */
+  background-color:rgb(171, 217, 237); /* 背景色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none; /* リストの点を削除 */
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li a {
+  text-decoration: none; /* 下線を削除 */
+  color: #333; /* 文字色 */
+  padding: 10px 15px; /* リンクの余白 */
+  font-weight: bold;
+}
+
+.header-nav li a:hover {
+  color: #007bff; /* ホバー時の色 */
+}
+
+.login-button {
+  text-decoration: none;
+  color: #007bff;
+  padding: 8px 15px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.reserve-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
